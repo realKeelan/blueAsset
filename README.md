@@ -1,27 +1,40 @@
-# BlueAsset
+## BlueAsset Leave Application 🌍
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.2.
+A simple leave application that allows users to login, view their summary of leave, request for leave, and reset data.
 
-## Development server
+## Getting Started 🏋️
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Prerequisites ⚙️
 
-## Code scaffolding
+Node.js - v14 or above
+Angular CLI - v11 or above
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Installing 📥
 
-## Build
+Clone the repository or download the ZIP file.
+Install the dependencies by running npm install.
+Start the development server by running ng serve.
+Open your browser and navigate to http://localhost:4200.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Usage 🧩
 
-## Running unit tests
+Login with your username and password.
+View your summary data, including leave taken, leave available, last leave from and to, and last leave reason.
+Create a leave request by selecting the leave from and to date, and leave reason from the dropdown menu.
+Click on the "Submit" button to submit your leave request.
+To reset the data to the original state, click on the "RESET" button.
+To logout, click on the "Logout" button.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Built With 🛠️
 
-## Running end-to-end tests
+Angular - The web framework used
+Angular Material 
+REST - API integration
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Authors 🦾
 
-## Further help
+Keelan Sillard
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Acknowledgments 🍻
+
+Willie Schoeman and Christian de Beer for setting up the task and scope.
