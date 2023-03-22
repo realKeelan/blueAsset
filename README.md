@@ -22,8 +22,8 @@ To logout, click on the "Logout" button.
 
 ## Built With 🛠️
 
-Angular - The web framework used
-Angular Material 
+Angular - The web framework used, 
+Angular Material, 
 REST - API integration
 
 ## Authors 🦾
