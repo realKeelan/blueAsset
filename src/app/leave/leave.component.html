@@ -1,0 +1,90 @@
+<div class="img-container">
+  <img src="../assets/img/logobl.png" alt="blue asset logo" />
+</div>
+<div class="container">
+  <div>
+    <h1>Leave Summary</h1>
+    <mat-list>
+      <mat-list-item>Leave taken: {{ leaveSummary?.leaveTaken }}</mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item
+        >Leave available: {{ leaveSummary?.leaveAvailable }}</mat-list-item
+      >
+      <mat-divider></mat-divider>
+      <mat-list-item
+        >Last leave from:
+        {{ leaveSummary?.lastLeaveFrom | date }}</mat-list-item
+      >
+      <mat-divider></mat-divider>
+      <mat-list-item
+        >Last leave to: {{ leaveSummary?.lastLeaveTo | date }}</mat-list-item
+      >
+      <mat-divider></mat-divider>
+      <mat-list-item
+        >Last leave reason: {{ leaveSummary?.lastLeaveReason }}</mat-list-item
+      >
+      <mat-divider></mat-divider>
+    </mat-list>
+    <br />
+    <br />
+    <div style="height: 16px;"><span *ngIf="createReqMessage">
+      {{ createReqMessage }}
+    </span></div>
+    <br />
+    <br />
+    <h1>New Leave Request</h1>
+    <form *ngIf="leaveForm" [formGroup]="leaveForm">
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Start Date:</mat-label>
+          <input matInput type="date" [formControl]="leaveFrom" />
+        </mat-form-field>
+        <br />
+        <mat-form-field appearance="fill">
+          <mat-label>End Date:</mat-label>
+          <input matInput type="date" [formControl]="leaveTo" />
+        </mat-form-field>
+        <br />
+        <mat-form-field appearance="fill">
+          <mat-label>Leave Reason:</mat-label>
+          <mat-select [formControl]="leaveReason" required>
+            <mat-option>--</mat-option>
+            <mat-option
+              *ngFor="let leaveReason of leaveReasons"
+              [value]="leaveReason"
+            >
+              {{ leaveReason }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <br />
+        <div class="btn-group">
+          <div class="submit-btn">
+            <button
+              mat-raised-button
+              color="primary"
+              type="submit"
+              (click)="onCreateLeaveRequest()"
+            >
+              Submit
+            </button>
+          </div>
+          <div class="reset-btn">
+            <button mat-raised-button color="warn" (click)="resetData()">
+              Reset
+            </button>
+          </div>
+          <div class="logout-btn">
+            <button
+              mat-raised-button
+              style="background-color: rgb(211, 211, 211)"
+              (click)="logout()"
+            >
+              Logout
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

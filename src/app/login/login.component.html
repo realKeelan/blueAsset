@@ -1,0 +1,48 @@
+<div>
+  <img src="../assets/img/logobl.png" alt="blue assets logo">
+</div>
+<div class="form-container">
+  <form class="form" [formGroup]="loginForm">
+    <mat-form-field>
+      <label mat-label for="username">Username:</label>
+      <input
+        matInput
+        type="text"
+        id="username"
+        name="username"
+        [formControl]="usernameContol"
+      />
+    </mat-form-field>
+    <br />
+    <mat-form-field>
+      <label mat-label for="password">Password</label>
+      <input
+        matInput
+        type="password"
+        id="password"
+        name="password"
+        [formControl]="passwordControl"
+      />
+    </mat-form-field>
+    <br />
+    <button
+      (click)="onSubmit()"
+      mat-raised-button
+      type="submit"
+      color="primary"
+      class="btn"
+      [disabled]="isLoading"
+    >
+      Login
+      <mat-progress-spinner
+        *ngIf="isLoading"
+        mode="indeterminate"
+        color="primary"
+        [diameter]="20"
+      ></mat-progress-spinner>
+    </button>
+    <span *ngIf="loginError">
+      {{ loginError }}
+    </span>
+  </form>
+</div>
