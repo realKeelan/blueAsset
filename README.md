@@ -4,11 +4,6 @@ A simple leave application that allows users to login, view their summary of lea
 
 ## Getting Started 🏋️
 
-## Prerequisites ⚙️
-
-Node.js - v14 or above
-Angular CLI - v11 or above
-
 ## Installing 📥
 
 Clone the repository or download the ZIP file.
